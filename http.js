@@ -16,3 +16,14 @@ const server = http.createServer((req, res)=>{
 })
 
 server.listen(5000)
+
+const server1 = http.createServer()
+
+server1.on('request',(req, res)=>{
+    res.end('This is event emitted')
+})
+
+server1.listen(5001, ()=>{
+    console.log('Server is listening at 5001....');
+    
+})
